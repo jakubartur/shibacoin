@@ -14,26 +14,14 @@ df -h
 cd ~ && sudo apt-get update && sudo apt-get upgrade -y &&
 sudo apt-get install git curl cmake automake python3 bsdmainutils libtool autotools-dev libboost-all-dev libssl-dev libevent-dev libdb++-dev libminiupnpc-dev libprotobuf-dev protobuf-compiler pkg-config net-tools build-essential -y &&
 
+sed -i 's/__atomic_compare_exchange/__atomic_compare_exchange_db/g' db-4.8.30.NC/dbinc/atomic.h
+
 # Install the repository ppa:bitcoin/bitcoin
 sudo apt-get install software-properties-common -y &&
 sudo add-apt-repository ppa:bitcoin/bitcoin -y &&
 sudo apt-get update -y &&
+sudo apt install libdb5.3++ libdb5.3++-dev -y && 
 
-cd ~ 
-
-cd mbrocoin
-
-#use Berkeley DB 4.8
-MBROCOIN_ROOT=$(pwd)
-BDB_PREFIX="${MBROCOIN_ROOT}/db4"
-mkdir -p $BDB_PREFIX
-wget 'http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz'
-tar -xzvf db-4.8.30.NC.tar.gz
-cd db-4.8.30.NC/build_unix/
-../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
-make install
-
-cd $MBROCOIN_ROOT
 
 cd ~ 
 cd mbrocoin
