@@ -37,7 +37,7 @@ cd $MBROCOIN_ROOT
 
 ./autogen.sh
  
-./autogen.sh && ./configure --enable-upnp-default --enable-hardening --disable-option-checking '--without-gui' '--disable-tests' '--disable-shared' '--with-pic' '--with-bignum=no' '--enable-module-recovery' --cache-file=/dev/null --srcdir=. && make && make install
+./autogen.sh && ./configure --enable-upnp-default --without-gui --without-bdb --enable-hardening --disable-option-checking '--without-gui' '--disable-tests' '--disable-shared' '--with-pic' '--with-bignum=no' '--enable-module-recovery' --cache-file=/dev/null --srcdir=. && make && make install
 
 sudo ufw enable -y 
 sudo ufw allow 14141/tcp
