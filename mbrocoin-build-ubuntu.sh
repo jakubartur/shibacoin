@@ -37,11 +37,7 @@ cd $MBROCOIN_ROOT
 
 ./autogen.sh
  
-./configure --with-incompatible-bdb --enable-upnp-default --without-gui LDFLAGS="-L${BDB_PREFIX}/lib/" CXXFLAGS="-O2" CPPFLAGS="-I${BDB_PREFIX}/include/" CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --enable-hardening
-
-make
-
-make install
+./autogen.sh && ./configure --enable-upnp-default --enable-hardening --disable-option-checking '--without-gui' '--disable-tests' '--disable-shared' '--with-pic' '--with-bignum=no' '--enable-module-recovery' --cache-file=/dev/null --srcdir=. && make && make install
 
 sudo ufw enable -y 
 sudo ufw allow 14141/tcp
