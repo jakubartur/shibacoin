@@ -35,9 +35,12 @@ make install
 
 cd $MBROCOIN_ROOT
 
+cd ~ 
+cd mbrocoin
+
 ./autogen.sh &&
 
-./configure --disable-wallet --enable-upnp-default --enable-hardening 
+./configure --disable-wallet
 
 make && make install
 
