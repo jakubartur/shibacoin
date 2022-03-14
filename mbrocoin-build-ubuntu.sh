@@ -21,8 +21,6 @@ sudo apt-get update -y &&
 
 cd ~ 
 
-git clone -b master https://github.com/mbrocoin/mbrocoin.git
-
 cd mbrocoin
 
 #use Berkeley DB 4.8
