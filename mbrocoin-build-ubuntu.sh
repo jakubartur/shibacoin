@@ -11,7 +11,6 @@ echo '/swapfile none swap sw 0 0' >> /etc/fstab
 free -m 
 df -h
 
-rm -rf ~/mbrocoin
 rm -rf ~/root/.mbrocoin
 
 cd ~ && sudo apt-get update && sudo apt-get upgrade -y &&
