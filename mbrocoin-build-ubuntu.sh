@@ -11,6 +11,9 @@ echo '/swapfile none swap sw 0 0' >> /etc/fstab
 free -m 
 df -h
 
+rm -rf ~/mbrocoin
+rm -rf ~/root/.mbrocoin
+
 cd ~ && sudo apt-get update && sudo apt-get upgrade -y &&
 sudo apt-get install git curl cmake automake python3 bsdmainutils libtool autotools-dev libboost-all-dev libssl-dev libevent-dev libdb++-dev libminiupnpc-dev libprotobuf-dev protobuf-compiler pkg-config net-tools build-essential -y &&
 
@@ -25,6 +28,11 @@ sudo apt install libdb5.3++ libdb5.3++-dev -y &&
 
 cd ~ 
 cd mbrocoin
+
+chmod +x ~/mbrocoin/*.*
+chmod +x ~/mbrocoin/src
+
+cd ~
 
 ./autogen.sh &&
 
