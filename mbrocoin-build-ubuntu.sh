@@ -32,6 +32,7 @@ chmod +x ~/mbrocoin/*.*
 chmod +x ~/mbrocoin/src
 
 cd ~
+cd mbrocoin
 
 ./autogen.sh &&
 
