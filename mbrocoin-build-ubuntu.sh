@@ -30,8 +30,8 @@ cd mbrocoin
 
 ./contrib/install_db4.sh `pwd`
 
-export BDB_PREFIX='${BDB_PREFIX}'
-
+export BDB_PREFIX='/root/mbrocoin/db4'
+  
 ./autogen.sh
 
 ./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --enable-upnp-default --enable-hardening
