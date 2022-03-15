@@ -35,11 +35,12 @@ export BDB_PREFIX='${BDB_PREFIX}'
 cd ~
 cd mbrocoin
 
-./autogen.sh &&
+./autogen.sh
 
-./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-upnp-default --enable-natpmp-default --enable-hardening
+./configure --disable-dependency-tracking CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --enable-upnp-default --enable-natpmp-default --enable-hardening BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" 
 
-make && make install
+make 
+make install
 
 sudo ufw enable -y 
 sudo ufw allow 14141/tcp
