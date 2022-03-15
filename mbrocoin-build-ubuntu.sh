@@ -34,7 +34,7 @@ export BDB_PREFIX='${BDB_PREFIX}'
 
 ./autogen.sh
 
-./configure CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" 
+./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include"
 
 make 
 make install
