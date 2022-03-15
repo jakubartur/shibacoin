@@ -32,12 +32,9 @@ cd mbrocoin
 
 export BDB_PREFIX='${BDB_PREFIX}'
 
-cd ~
-cd mbrocoin
-
 ./autogen.sh
 
-./configure --disable-dependency-tracking CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" --enable-upnp-default --enable-natpmp-default --enable-hardening BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" 
+./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768" 
 
 make 
 make install
