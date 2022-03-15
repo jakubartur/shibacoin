@@ -37,7 +37,7 @@ cd mbrocoin
 
 ./autogen.sh &&
 
-./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-upnp-default --enable-natpmp-default --enable-hardening -y &&
+./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include" --enable-upnp-default --enable-natpmp-default --enable-hardening
 
 make && make install
 
