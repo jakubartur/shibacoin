@@ -44,5 +44,5 @@ Here are some ideas to get you started:
 * Target timespan   10 minutes
 
 #### [Doc Build Instructions](https://github.com/mbrocoin/mbrocoin/tree/master/doc)
-#### [CLI Compile Linux Ubuntu](https://github.com/mbrocoin/mbrocoin/wiki/CLI-Compile-Linux-Ubuntu-18.04-or-2004-LTS)
+#### [CLI Compile Linux Ubuntu](https://github.com/mbrocoin/mbrocoin/wiki/CLI-Compile-Linux-Ubuntu-18.04-or-20.04-LTS)
 
