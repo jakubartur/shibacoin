@@ -34,8 +34,6 @@ export BDB_PREFIX='${BDB_PREFIX}'
 
 ../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
 
-make install
-
 cd ~
 cd mbrocoin
 
