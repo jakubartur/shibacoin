@@ -31,7 +31,10 @@ cd mbrocoin
 ./contrib/install_db4.sh `pwd`
 
 export BDB_PREFIX='${BDB_PREFIX}'
-./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include
+
+../dist/configure --enable-cxx --disable-shared --with-pic --prefix=$BDB_PREFIX
+
+make install
 
 cd ~
 cd mbrocoin
