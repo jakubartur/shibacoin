@@ -14,29 +14,31 @@ df -h
 rm -rf ~/root/.mbrocoin
 
 cd ~ && sudo apt-get update && sudo apt-get upgrade -y &&
-sudo apt-get install git curl cmake automake python3 bsdmainutils libtool autotools-dev libboost-all-dev libssl-dev libevent-dev libdb++-dev libminiupnpc-dev libprotobuf-dev protobuf-compiler pkg-config net-tools build-essential -y &&
+sudo apt-get install git curl cmake automake python3 bsdmainutils libtool autotools-dev libboost-all-dev libssl-dev libevent-dev libdb++-dev libminiupnpc-dev libnatpmp-dev systemtap-sdt-dev libprotobuf-dev protobuf-compiler libzmq3-dev libsqlite3-dev pkg-config net-tools build-essential -y &&
+sudo apt gen install sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools -y && 
+sudo apt install qtwayland5 -y && 
+sudo apt-get install libqrencode-dev -y && 
 
 sed -i 's/__atomic_compare_exchange/__atomic_compare_exchange_db/g' db-4.8.30.NC/dbinc/atomic.h
 
 # Install the repository ppa:bitcoin/bitcoin
 sudo apt-get install software-properties-common -y &&
-sudo add-apt-repository ppa:bitcoin/bitcoin -y &&
 sudo apt-get update -y &&
-sudo apt install libdb5.3++ libdb5.3++-dev -y && 
-
 
 cd ~ 
 cd mbrocoin
 
-chmod +x ~/mbrocoin/*.*
-chmod +x ~/mbrocoin/src
+./contrib/install_db4.sh `pwd`
+
+export BDB_PREFIX='${BDB_PREFIX}'
+./configure BDB_LIBS="-L${BDB_PREFIX}/lib -ldb_cxx-4.8" BDB_CFLAGS="-I${BDB_PREFIX}/include
 
 cd ~
 cd mbrocoin
 
 ./autogen.sh &&
 
-./configure --disable-wallet
+./configure --enable-upnp-default --enable-natpmp-default --enable-hardening LDFLAGS="-L${BDB_PREFIX}/lib/" CPPFLAGS="-I${BDB_PREFIX}/include/" CXXFLAGS="--param ggc-min-expand=1 --param ggc-min-heapsize=32768"
 
 make && make install
 
