@@ -154,7 +154,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("0xcc226f59f67c2bc303d8d77483d959c4639cbed5d628081b51938267df09ccdf"));
 
         vSeeds.push_back(CDNSSeedData("51.195.249.132", "51.195.249.132",true));
-	vSeeds.push_back(CDNSSeedData("158.69.130.185", "158.69.130.185",true)); 
+	vSeeds.push_back(CDNSSeedData("135.125.225.55", "135.125.225.55",true)); 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,50); // M
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,25); // B
@@ -173,8 +173,8 @@ public:
 
         checkpointData = (CCheckpointData) {
                     boost::assign::map_list_of
-                    (0, uint256S("0x00000684613ed8666eb673391dae7d76ba9420cadf4a1912775ae3759689923a")),
-                    1645757350, // * UNIX timestamp of last checkpoint block
+                    (21963, uint256S("0x393ac3e014ee13b47dc9aa09845fa3ea997e4cde6af6317b5f271909b7eaf9ab")),
+                    1647508455, // * UNIX timestamp of last checkpoint block https://timestampgenerator.com/1647508455/+00:00 Thu, 17 Mar 2022 09:14:15 +0000 
                     0,    // * total number of transactions between genesis and last checkpoint
                                 //   (the tx=... number in the SetBestChain debug.log lines)
                     0      // * estimated number of transactions per day after checkpoint
