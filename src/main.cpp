@@ -1778,6 +1778,7 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
     return true;
 }
 
+// ==================================================================================================================================
 CAmount GetProofOfWorkSubsidy()
 {
     int nBlockHeight = chainActive.Height() + 1;
@@ -1785,10 +1786,14 @@ CAmount GetProofOfWorkSubsidy()
     if (nBlockHeight == 1) {
      return 1000000 * COIN;
     }
-    if (nBlockHeight != 1) {
+    if (nBlockHeight <= 30000) {
     return 50 * COIN;
     }
+    if (nBlockHeight >= 30001) {
+    return 15 * COIN;
+    }
 }
+// ===================================================================================================================================
 
 CAmount GetProofOfStakeSubsidy()
 {
