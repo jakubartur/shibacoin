@@ -48,9 +48,6 @@ To build executables for Windows 32-bit:
     ./autogen.sh
     ./configure --prefix=`pwd`/depends/i686-w64-mingw32
     make
-
-For further documentation on the depends system see [README.md](../depends/README.md) in the depends directory.
-
 ## Depends system
 
 For further documentation on the depends system see [README.md](../depends/README.md) in the depends directory.
