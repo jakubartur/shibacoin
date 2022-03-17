@@ -61,3 +61,7 @@ as they appear in the release `.zip` archive. This can be done in the following
 way. This will install to `c:\workspace\mbrocoin`, for example:
 
     make install DESTDIR=/mnt/c/local/mbrocoin
+
+You can also create an installer using:
+
+    make deploy
