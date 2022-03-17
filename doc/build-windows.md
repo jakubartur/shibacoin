@@ -31,20 +31,22 @@ to work around issues with mingw-w64. See issue [8732](https://github.com/redeco
 sudo update-alternatives --config x86_64-w64-mingw32-g++
 sudo update-alternatives --config x86_64-w64-mingw32-gcc
 ```
-To build executables for Windows 32-bit:
-
-    cd depends
-    make HOST=i686-w64-mingw32 -j4
-    cd ..
-    ./configure --prefix=`pwd`/depends/i686-w64-mingw32
-    make
-
 To build executables for Windows 64-bit:
 
     cd depends
     make HOST=x86_64-w64-mingw32 -j4
     cd ..
+    ./autogen.sh
     ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32
+    make
+
+To build executables for Windows 32-bit:
+
+    cd depends
+    make HOST=i686-w64-mingw32 -j4
+    cd ..
+    ./autogen.sh
+    ./configure --prefix=`pwd`/depends/i686-w64-mingw32
     make
 
 For further documentation on the depends system see [README.md](../depends/README.md) in the depends directory.
