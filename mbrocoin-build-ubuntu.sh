@@ -58,7 +58,7 @@ rpcpassword=c=MBRO
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
 addnode=51.195.249.132
-addnode=158.69.130.185
+addnode=135.125.225.55
 CONFIG
 
 chmod 700 ~/.mbrocoin/mbrocoin.conf
