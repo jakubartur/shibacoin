@@ -23,7 +23,7 @@ Then, install the toolchains and curl:
     sudo apt update
     sudo apt upgrade
     sudo apt-get install g++-mingw-w64-i686 mingw-w64-i686-dev g++-mingw-w64-x86-64 mingw-w64-x86-64-dev curl -y
-    sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git nsis -y
+    sudo apt install build-essential libtool autotools-dev automake pkg-config bsdmainutils curl git libtool-bin nsis -y
 
 If you're building on Ubuntu 17.04 or later, run these two commands, selecting the 'posix' variant for both,
 to work around issues with mingw-w64. See issue [8732](https://github.com/redecoinProject/redecoin/issues/8732) for more information.
