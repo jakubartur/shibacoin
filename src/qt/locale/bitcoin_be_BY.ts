@@ -1259,7 +1259,7 @@
     </message>
     <message>
         <source>Bitcoin Core</source>
-        <translation>mbrocoin</translation>
+        <translation>shibacoin</translation>
     </message>
     <message>
         <source>Do you want to rebuild the block database now?</source>

@@ -71,7 +71,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>mbrocoin</translation>
+        <translation>shibacoin</translation>
     </message>
     <message>
         <source>Wallet</source>

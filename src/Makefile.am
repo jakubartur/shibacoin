@@ -65,11 +65,11 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += mbrocoind
+  bin_PROGRAMS += shibacoind
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += mbrocoin-cli mbrocoin-tx
+  bin_PROGRAMS += shibacoin-cli shibacoin-tx
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -383,17 +383,17 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# mbrocoind binary #
-mbrocoind_SOURCES = bitcoind.cpp
-mbrocoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-mbrocoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-mbrocoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# shibacoind binary #
+shibacoind_SOURCES = bitcoind.cpp
+shibacoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+shibacoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+shibacoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-mbrocoind_SOURCES += bitcoind-res.rc
+shibacoind_SOURCES += bitcoind-res.rc
 endif
 
-mbrocoind_LDADD = \
+shibacoind_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -406,37 +406,37 @@ mbrocoind_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
   
-mbrocoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+shibacoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# mbrocoin-cli binary #
-mbrocoin_cli_SOURCES = bitcoin-cli.cpp
-mbrocoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-mbrocoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-mbrocoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# shibacoin-cli binary #
+shibacoin_cli_SOURCES = bitcoin-cli.cpp
+shibacoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+shibacoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+shibacoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-mbrocoin_cli_SOURCES += bitcoin-cli-res.rc
+shibacoin_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-mbrocoin_cli_LDADD = \
+shibacoin_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-mbrocoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+shibacoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 
-# mbrocoin-tx binary #
-mbrocoin_tx_SOURCES = bitcoin-tx.cpp
-mbrocoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-mbrocoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-mbrocoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# shibacoin-tx binary #
+shibacoin_tx_SOURCES = bitcoin-tx.cpp
+shibacoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+shibacoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+shibacoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-mbrocoin_tx_SOURCES += bitcoin-tx-res.rc
+shibacoin_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-mbrocoin_tx_LDADD = \
+shibacoin_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -444,7 +444,7 @@ mbrocoin_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-mbrocoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+shibacoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #

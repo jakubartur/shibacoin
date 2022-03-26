@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "mbrocoin"
-            VALUE "FileDescription",    "mbrocoin-cli (JSON-RPC client for " PACKAGE_NAME ")"
+            VALUE "CompanyName",        "shibacoin"
+            VALUE "FileDescription",    "shibacoin-cli (JSON-RPC client for " PACKAGE_NAME ")"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "mbrocoin-cli"
+            VALUE "InternalName",       "shibacoin-cli"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "mbrocoin-cli.exe"
-            VALUE "ProductName",        "mbrocoin-cli"
+            VALUE "OriginalFilename",   "shibacoin-cli.exe"
+            VALUE "ProductName",        "shibacoin-cli"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

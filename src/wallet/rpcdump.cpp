@@ -549,11 +549,11 @@ UniValue dumpprivkey(const UniValue& params, bool fHelp)
     
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "dumpprivkey \"mbrocoinaddress\"\n"
-            "\nReveals the private key corresponding to 'mbrocoinaddress'.\n"
+            "dumpprivkey \"shibacoinaddress\"\n"
+            "\nReveals the private key corresponding to 'shibacoinaddress'.\n"
             "Then the importprivkey can be used with this output\n"
             "\nArguments:\n"
-            "1. \"mbrocoinaddress\"   (string, required) The mbrocoin address for the private key\n"
+            "1. \"shibacoinaddress\"   (string, required) The shibacoin address for the private key\n"
             "\nResult:\n"
             "\"key\"                (string) The private key\n"
             "\nExamples:\n"

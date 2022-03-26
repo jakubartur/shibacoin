@@ -16,7 +16,7 @@ while :
 do
 
 
-./mbrocoin-cli generatetoaddress 1 $(./mbrocoin-cli getnewaddress)
+./shibacoin-cli generatetoaddress 1 $(./shibacoin-cli getnewaddress)
 
 
 

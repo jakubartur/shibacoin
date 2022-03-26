@@ -48,14 +48,14 @@
 #endif
 
 const int BITCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCOIN_IPC_PREFIX("mbrocoin:");
+const QString BITCOIN_IPC_PREFIX("shibacoin:");
 // BIP70 payment protocol messages
 const char* BIP70_MESSAGE_PAYMENTACK = "PaymentACK";
 const char* BIP70_MESSAGE_PAYMENTREQUEST = "PaymentRequest";
 // BIP71 payment protocol media types
-const char* BIP71_MIMETYPE_PAYMENT = "application/mbrocoin-payment";
-const char* BIP71_MIMETYPE_PAYMENTACK = "application/mbrocoin-paymentack";
-const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/mbrocoin-paymentrequest";
+const char* BIP71_MIMETYPE_PAYMENT = "application/shibacoin-payment";
+const char* BIP71_MIMETYPE_PAYMENTACK = "application/shibacoin-paymentack";
+const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/shibacoin-paymentrequest";
 // BIP70 max payment request size in bytes (DoS protection)
 const qint64 BIP70_MAX_PAYMENTREQUEST_SIZE = 50000;
 
@@ -360,7 +360,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
     GOOGLE_PROTOBUF_VERIFY_VERSION;
 
     // Install global event filter to catch QFileOpenEvents
-    // on Mac: sent when you click mbrocoin: links
+    // on Mac: sent when you click shibacoin: links
     // other OSes: helpful when dealing with payment request files
     if (parent)
         parent->installEventFilter(this);
@@ -393,7 +393,7 @@ PaymentServer::~PaymentServer()
 }
 
 //
-// OSX-specific way of handling mbrocoin: URIs and PaymentRequest mime types.
+// OSX-specific way of handling shibacoin: URIs and PaymentRequest mime types.
 // Also used by paymentservertests.cpp and when opening a payment request file
 // via "Open URI..." menu entry.
 //
@@ -419,7 +419,7 @@ void PaymentServer::initNetManager()
     if (netManager != NULL)
         delete netManager;
 
-    // netManager is used to fetch paymentrequests given in mbrocoin: URIs
+    // netManager is used to fetch paymentrequests given in shibacoin: URIs
     netManager = new QNetworkAccessManager(this);
 
     QNetworkProxy proxy;
@@ -517,14 +517,14 @@ void PaymentServer::handleURIOrFile(const QString &s)
         return;
     }
 
-    // mbrocoin: CashAddr URI
+    // shibacoin: CashAddr URI
     QString schemeCash = GUIUtil::bitcoinURIScheme(Params(), true);
     if (handleURI(schemeCash, s))
     {
         return;
     }
 
-    // mbrocoin: Legacy URI
+    // shibacoin: Legacy URI
     QString schemeLegacy = GUIUtil::bitcoinURIScheme(Params(), false);
     if (handleURI(schemeLegacy, s))
     {

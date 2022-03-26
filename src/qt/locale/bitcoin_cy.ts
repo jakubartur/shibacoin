@@ -115,7 +115,7 @@
     </message>
     <message>
         <source>Bitcoin</source>
-        <translation>mbrocoin</translation>
+        <translation>shibacoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -485,7 +485,7 @@
     </message>
     <message>
         <source>Bitcoin Core</source>
-        <translation>mbrocoin</translation>
+        <translation>shibacoin</translation>
     </message>
     <message>
         <source>Information</source>
