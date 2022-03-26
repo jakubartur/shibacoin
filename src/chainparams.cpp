@@ -4,8 +4,9 @@
 // Copyright (c) 2013-2014 The NovaCoin Developers
 // Copyright (c) 2014-2018 The BlackCoin Developers
 // Copyright (c) 2018-2022 The Blackcoin More Developers
-// Copyright (c) 2021-2022 The Safeminecoin developers
-// Copyright (c) 2022 The Mbrocoin developers
+// Copyright (c) 2021-2022 The Safeminecoin Developers
+// Copyright (c) 2022 The MbroCoin Developers
+// Copyright (c) 2022 The ShibaCoin Project Developers
 
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -47,11 +48,6 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     return genesis;
 }
 
-/**
- * Build the genesis block. Note that the output of its generation
- * transaction cannot be spent since it did not originally exist in the
- * database.
- */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "Appreciate your coins like you keep your Life!";
@@ -59,16 +55,8 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
-/**
- * Main network
- */
-/**
- * What makes a good checkpoint block?
- * + Is surrounded by blocks with reasonable timestamps
- *   (no blocks before with a timestamp after, none after with
- *    timestamp before)
- * + Contains no strange transactions
- */
+
+/*** M A I N   N E T W O R K ***/
 
 class CMainParams : public CChainParams {
 public:
@@ -95,35 +83,23 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
-        /*
-        Deployment of BIP68, BIP112, and BIP113.
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = 999999999999ULL; // never
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = 0; // out of time
-        */
-
         consensus.nProtocolV1RetargetingFixedTime = 1645757350;
         consensus.nProtocolV2Time = 1645757351;
         consensus.nProtocolV3Time = 1645757352;
-        consensus.nLastPOWBlock = 100000;
+        consensus.nLastPOWBlock = 200000;
         consensus.nStakeTimestampMask = 0xf;
-        consensus.nCoinbaseMaturity = 20;
+        consensus.nCoinbaseMaturity = 24;
         consensus.nStakeMinAge = 12 * 60 * 60;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100001");
 
-        /**
-         * The message start string is designed to be unlikely to occur in normal data.
-         * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
-         * a large 32-bit integer with any alignment.
-         */
         pchMessageStart[0] = 0x3d;
         pchMessageStart[1] = 0xb5;
         pchMessageStart[2] = 0x80;
         pchMessageStart[3] = 0x00;
-        nDefaultPort = 14142;
-        nPruneAfterHeight = 1000000;
+        nDefaultPort = 23456;
+        nPruneAfterHeight = 10000;
 
         genesis = CreateGenesisBlock(1645757350, 932906, 0x1e0ffff0, 1, 0);
         consensus.hashGenesisBlock = genesis.GetHash();
@@ -161,7 +137,7 @@ public:
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1,60); // R
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
-        cashaddrPrefix = "mbrocoin";
+        cashaddrPrefix = "shibacoin";
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
@@ -183,9 +159,9 @@ public:
 };
 static CMainParams mainParams;
 
-/**
- * Testnet
- */
+ 
+/*** T E S T N E T ***/
+
 class CTestNetParams : public CChainParams {
 public:
     CTestNetParams() {
@@ -266,7 +242,7 @@ public:
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,60); // R
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
-        cashaddrPrefix = "mbrotest";
+        cashaddrPrefix = "shibatest";
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
@@ -287,9 +263,9 @@ public:
 };
 static CTestNetParams testNetParams;
 
-/**
- * Regression test
- */
+
+/*** R E G R E S S I O N    T E S T ***/
+
 class CRegTestParams : public CChainParams {
 public:
     CRegTestParams() {
@@ -369,7 +345,7 @@ public:
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1,126); // s & t
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
-        cashaddrPrefix = "mbroreg";
+        cashaddrPrefix = "shibareg";
 
         fMiningRequiresPeers = false;
         fDefaultConsistencyChecks = true;
