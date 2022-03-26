@@ -35,9 +35,10 @@ Here are some ideas to get you started:
 * P2P port	23456
 * Coinbase maturity (default 24 confirmation) blocks
 * Transaction (default 6 confirmation) blocks
+* Total Coin 5.000.000 SHIBA
 * * Block Rewards
-	* PoW   5 SHIBA per block (for last POW 100.000 blocks) starting block 30.0001 PoW reward lowered to 15 MBRO
-	* PoS   2 SHIBA per block
+	* PoW   5 SHIBA per block (for last POW 100.000 blocks)
+	* PoS   2 SHIBA per block (not activated)
 	  *  Min. stake age   12 hours
 	  *  Max. stake age   Unlimited
 	* Premine and Developments 1.000.000 coins
