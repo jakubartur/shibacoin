@@ -30,7 +30,7 @@ cd shibacoin
 
 ./contrib/install_db4.sh `pwd`
 
-export BDB_PREFIX='/root/mbrocoin/db4'
+export BDB_PREFIX='/root/shibacoin/db4'
   
 ./autogen.sh
 
