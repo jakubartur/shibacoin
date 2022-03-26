@@ -95,8 +95,8 @@ public:
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000100001");
 
         pchMessageStart[0] = 0x3d;
-        pchMessageStart[1] = 0xb5;
-        pchMessageStart[2] = 0x80;
+        pchMessageStart[1] = 0x80;
+        pchMessageStart[2] = 0xb5;
         pchMessageStart[3] = 0x00;
         nDefaultPort = 23456;
         nPruneAfterHeight = 10000;
@@ -132,9 +132,9 @@ public:
         vSeeds.push_back(CDNSSeedData("51.195.249.132", "51.195.249.132",true));
 	vSeeds.push_back(CDNSSeedData("135.125.225.55", "135.125.225.55",true)); 
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,50); // M
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,25); // B
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1,60); // R
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,63); // S
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,40); // H
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1,28); // C
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
         cashaddrPrefix = "shibacoin";
@@ -237,9 +237,9 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,66); // T
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,65); // T
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,60); // R
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,65); // T
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,33); // E
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,63); // S
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x35)(0x87)(0xCF).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x35)(0x83)(0x94).convert_to_container<std::vector<unsigned char> >();
         cashaddrPrefix = "shibatest";
@@ -341,8 +341,8 @@ public:
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,61); // R
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,65); // T 
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1,126); // s & t
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,33); // E 
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1,38); // G
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
         cashaddrPrefix = "shibareg";
