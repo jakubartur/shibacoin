@@ -26,7 +26,7 @@ Here are some ideas to get you started:
 ### ShibaCoin not ShibaToken - you must be mining to get this coin
 
 #### Coin Specification :
-* Algorithm: Scrypt Proof of Work (POW) and Proof of Stake (POS)
+* Algorithm    Scrypt Proof of Work (POW) and Proof of Stake (POS)
 * Coin Name    SHIBACOIN
 * Coin Ticker  SHIBA
 * Public Address  S
@@ -38,6 +38,7 @@ Here are some ideas to get you started:
 
 * Total Coin 5.000.000 SHIBA (no premine)
 * Block Rewards : (POW 2.860.000 SHIBA + PoS 2.140.000 SHIBA [510.000 + 1.630.000])
+	
 	Block Reward PoW : 
 	* Block Height 1 = 10.000 SHIBA
 	* Block Height <= 100 --> 5000 = 500.000 SHIBA
@@ -52,7 +53,7 @@ Here are some ideas to get you started:
 	* Block Height >= 2500 --> 12 = 30.000 SHIBA
 	* Block Height >= 5000 --> 8 = 40.000 SHIBA
 	* Block Height >= 10000 --> 4 = 40.000 SHIBA
-	* Block Height >= 200000 --> 2 = 400.000 SHIBA (estimate)
+	* Block Height >= 200000 --> 2 = 400.000 SHIBA
 	* Block Height == 200001 --> 1.630.000 SHIBA
 *  Min. stake age   12 hours
 *  Max. stake age   Unlimited
