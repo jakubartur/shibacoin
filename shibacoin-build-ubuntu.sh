@@ -67,4 +67,4 @@ ls -la ~/.shibacoin
 cd ~
 cd /usr/local/bin 
 
-mbrocoind -daemon -txindex -reindex
+shibacoind -daemon -txindex -reindex
