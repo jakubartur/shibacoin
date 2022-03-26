@@ -1711,11 +1711,6 @@ bool GetTransaction(const uint256 &hash, CTransaction &txOut, const Consensus::P
     return false;
 }
 
-
-
-
-
-
 //////////////////////////////////////////////////////////////////////////////
 //
 // CBlock and CBlockIndex
@@ -1779,26 +1774,63 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex, const Consensus
 }
 
 // ==================================================================================================================================
+
+//------------- PoW Miner Reward ---------------- //
+
 CAmount GetProofOfWorkSubsidy()
 {
     int nBlockHeight = chainActive.Height() + 1;
 
     if (nBlockHeight == 1) {
-     return 1000000 * COIN;
+     return 10000 * COIN;
     }
-    if (nBlockHeight <= 30000) {
-    return 50 * COIN;
+    if (nBlockHeight <= 100) {
+    return 5000 * COIN;
     }
-    if (nBlockHeight >= 30001) {
-    return 15 * COIN;
+    if (nBlockHeight <= 250) {
+    return 1000 * COIN;
+    }
+    if (nBlockHeight <= 500) {
+    return 500 * COIN;
+    }
+    if (nBlockHeight <= 1000) {
+    return 250 * COIN;
+    }
+    if (nBlockHeight <= 5000) {
+    return 100 * COIN;
+    }
+    if (nBlockHeight <= 10000) {
+    return 10 * COIN;
+    }
+    if (nBlockHeight <= 200000) {
+    return 5 * COIN;
     }
 }
-// ===================================================================================================================================
+
+//------------- PoS Stake Reward ---------------- //
 
 CAmount GetProofOfStakeSubsidy()
 {
-    return COIN * 5;
+    int nBlockHeight = chainActive.Height() + 1;
+
+    if (nBlockHeight >= 2500) {
+     return COIN * 12;
+    }
+    if (nBlockHeight >= 5000) {
+     return COIN * 8;
+    }
+    if (nBlockHeight >= 10000) {
+     return COIN * 4;
+    }
+    if (nBlockHeight >= 200000) {
+     return COIN * 2;
+	}
+    if (nBlockHeight == 200001) {
+     return COIN * 1630000;
+    }
 }
+
+// ===================================================================================================================================
 
 bool IsInitialBlockDownload()
 {
