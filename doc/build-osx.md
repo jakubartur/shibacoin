@@ -27,9 +27,9 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 Build Shibacoin
 ------------------------
 
-1. Clone the mbrocoin source code and cd into `shibacoin`
+1. Clone the shibacoin source code and cd into `shibacoin`
 
-        git clone https://gitlab.com/shibacoin/shibacoin/
+        git clone https://github.com/shibacoin/shibacoin/
         cd shibacoin
 
 2.  Build shibacoin:
