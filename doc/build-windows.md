@@ -58,9 +58,9 @@ Installation
 After building using the Windows subsystem it can be useful to copy the compiled
 executables to a directory on the windows drive in the same directory structure
 as they appear in the release `.zip` archive. This can be done in the following
-way. This will install to `c:\workspace\mbrocoin`, for example:
+way. This will install to `c:\workspace\shibacoin`, for example:
 
-    make install DESTDIR=/mnt/c/local/mbrocoin
+    make install DESTDIR=/mnt/c/local/shibacoin
 
 You can also create an installer using:
 
