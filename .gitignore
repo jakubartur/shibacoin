@@ -2,7 +2,7 @@
 
 *.exe
 src/mbrocoin
-src/mbrocoind
+src/shibacoind
 src/mbrocoin-cli
 src/mbrocoin-tx
 src/test/test_mbrocoin

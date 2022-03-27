@@ -53,7 +53,7 @@ Build mbrocoin
 Running
 -------
 
-mbrocoin is now available at `./src/mbrocoind`
+mbrocoin is now available at `./src/shibacoind`
 
 Before running, it's recommended you create an RPC configuration file.
 
@@ -61,7 +61,7 @@ Before running, it's recommended you create an RPC configuration file.
 
     chmod 600 "/Users/${USER}/Library/Application Support/mbrocoin/mbrocoin.conf"
 
-The first time you run mbrocoind, it will start downloading the blockchain. This process could take several hours.
+The first time you run shibacoind, it will start downloading the blockchain. This process could take several hours.
 
 You can monitor the download process by looking at the debug.log file:
 
@@ -70,7 +70,7 @@ You can monitor the download process by looking at the debug.log file:
 Other commands:
 -------
 
-    ./src/mbrocoind -daemon # Starts the mbrocoin daemon.
+    ./src/shibacoind -daemon # Starts the mbrocoin daemon.
     ./src/mbrocoin-cli --help # Outputs a list of command-line options.
     ./src/mbrocoin-cli help # Outputs a list of RPC commands when the daemon is running.
 

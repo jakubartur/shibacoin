@@ -16,7 +16,7 @@ The following are some helpful notes on how to run mbrocoin on your native platf
 Unpack the files into a directory and run:
 
 - /usr/local/bin/mbrocoin-qt (GUI) or
-- /usr/local/bin/mbrocoind (headless)
+- /usr/local/bin/shibacoind (headless)
 
 ### Windows
 
