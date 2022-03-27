@@ -29,7 +29,7 @@ Build Shibacoin
 
 1. Clone the shibacoin source code and cd into `shibacoin`
 
-        git clone https://github.com/shibacoin/shibacoin/
+        git clone https://github.com/shibacoinproject/shibacoin/
         cd shibacoin
 
 2.  Build shibacoin:
