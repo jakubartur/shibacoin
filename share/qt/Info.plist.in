@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>mbrocoin-Qt</string>
+  <string>shibacoin-Qt</string>
   
   <key>CFBundleName</key>
-  <string>mbrocoin-Qt</string>
+  <string>shibacoin-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.mbrocoin.mbrocoin-Qt</string>
+  <string>org.shibacoin.shibacoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>

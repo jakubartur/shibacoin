@@ -34,7 +34,7 @@ Build Shibacoin
 
 2.  Build shibacoin:
 
-    Configure and build the headless mbrocoin binaries as well as the GUI (if Qt is found).
+    Configure and build the headless shibacoin binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -70,13 +70,13 @@ You can monitor the download process by looking at the debug.log file:
 Other commands:
 -------
 
-    ./src/shibacoind -daemon # Starts the mbrocoin daemon.
+    ./src/shibacoind -daemon # Starts the shibacoin daemon.
     ./src/shibacoin-cli --help # Outputs a list of command-line options.
     ./src/shibacoin-cli help # Outputs a list of RPC commands when the daemon is running.
 
 Using Qt Creator as IDE
 ------------------------
-You can use Qt Creator as an IDE, for mbrocoin development.
+You can use Qt Creator as an IDE, for shibacoin development.
 Download and install the community edition of [Qt Creator](https://www.qt.io/download/).
 Uncheck everything except Qt Creator during the installation process.
 

@@ -1,12 +1,12 @@
 *.tar.gz
 
 *.exe
-src/mbrocoin
+src/shibacoin
 src/shibacoind
-src/mbrocoin-cli
-src/mbrocoin-tx
-src/test/test_mbrocoin
-src/qt/test/test_mbrocoin-qt
+src/shibacoin-cli
+src/shibacoin-tx
+src/test/test_shibacoin
+src/qt/test/test_shibacoin-qt
 
 # autoreconf
 Makefile.in
@@ -45,11 +45,11 @@ src/qt/forms/ui_*.h
 
 src/qt/test/moc*.cpp
 
-src/qt/mbrocoin-qt.config
-src/qt/mbrocoin-qt.creator
-src/qt/mbrocoin-qt.creator.user
-src/qt/mbrocoin-qt.files
-src/qt/mbrocoin-qt.includes
+src/qt/shibacoin-qt.config
+src/qt/shibacoin-qt.creator
+src/qt/shibacoin-qt.creator.user
+src/qt/shibacoin-qt.files
+src/qt/shibacoin-qt.includes
 
 .deps
 .dirstamp
@@ -86,8 +86,8 @@ src/qt/mbrocoin-qt.includes
 *.qm
 Makefile
 !depends/Makefile
-src/qt/mbrocoin-qt
-mbrocoin-Qt.app
+src/qt/shibacoin-qt
+shibacoin-Qt.app
 background.tiff*
 
 # Qt Creator
@@ -95,7 +95,7 @@ Makefile.am.user
 
 # Unit-tests
 Makefile.test
-mbrocoin-qt_test
+shibacoin-qt_test
 src/test/buildenv.py
 
 # Resources cpp
