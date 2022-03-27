@@ -50,10 +50,10 @@ Here are some ideas to get you started:
 	* Block Height <= 200000 --> 5 = 1.000.000 SHIBA
 
 	Block Reward PoS : 
-	* Block Height >= 2500 --> 12 = 30.000 SHIBA
-	* Block Height >= 5000 --> 8 = 40.000 SHIBA
-	* Block Height >= 10000 --> 4 = 40.000 SHIBA
-	* Block Height >= 200000 --> 2 = 400.000 SHIBA
+	* Block Height == 2500 --> 12 = 30.000 SHIBA
+	* Block Height <= 5000 --> 8 = 40.000 SHIBA
+	* Block Height <= 10000 --> 4 = 40.000 SHIBA
+	* Block Height <= 200000 --> 2 = 400.000 SHIBA
 	* Block Height == 200001 --> 1.630.000 SHIBA
 *  Min. stake age   12 hours
 *  Max. stake age   Unlimited
