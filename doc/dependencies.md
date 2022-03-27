@@ -31,7 +31,7 @@ These are the dependencies currently used by mbrocoin. You can find instructions
 
 Human help is also available from the following channels:
 
-Discord  - https://discord.gg/hjNUgWD
-Telegram - https://t.me/mbrocoinnl
-Keybase  - https://keybase.io/team/mbrocoin/
+Discord  - https://discord.gg/shibacoin
+Telegram - https://t.me/shibacoin
+Keybase  - https://keybase.io/team/shibacoin/
 
