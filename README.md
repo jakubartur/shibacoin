@@ -36,25 +36,28 @@ Here are some ideas to get you started:
 * Coinbase maturity (default 24 confirmation) blocks
 * Transaction (default 6 confirmation) blocks
 
-* Total Coin 5.000.000 SHIBA (no premine)
-* Block Rewards : (POW 2.860.000 SHIBA + PoS 2.140.000 SHIBA [510.000 + 1.630.000])
+* Total Coin 15.000.000  SHIBA (no premine)
+* Block Rewards : (POW 6.255.000 SHIBA + PoS 8.745.000 SHIBA)
 	
-	Block Reward PoW : 
-	* Block Height 1 = 10.000 SHIBA
-	* Block Height <= 100 --> 5000 = 500.000 SHIBA
-	* Block Height <= 250 --> 1000 = 250.000 SHIBA
-	* Block Height <= 500 --> 500 = 250.000 SHIBA
-	* Block Height <= 1000 --> 250 = 250.000 SHIBA
-	* Block Height <= 5000 --> 100 = 500.000 SHIBA
-	* Block Height <= 10000 --> 10 = 100.000 SHIBA
-	* Block Height <= 200000 --> 5 = 1.000.000 SHIBA
+	Block Reward PoW : 6.255.000 (5.460.555 + 794.445)
+	* Block Height 1 = 794.445 SHIBA
+	* Block Height <= 100 --> 1000 = 99 x 1000 = 99.000 SHIBA
+	* Block Height <= 250 --> 500 = 149 x 500 = 74.500 SHIBA
+	* Block Height <= 500 --> 30 = 249 x 250 = 62.250 SHIBA
+	* Block Height <= 1000 --> 25 = 499 x 100 = 49.900 SHIBA
+	* Block Height <= 5000 --> 20 = 3.999 x 50 = 199.950 SHIBA
+	* Block Height <= 10000 --> 15 = 4.999 x 25 = 124.975 SHIBA
+	* Block Height <= 250000 --> 10 = 239.999 x 15 = 3.599.985 SHIBA
+	* Block Height <= 500000 --> 5 = 249.999 x 5 = 1.249.995 SHIBA
 
-	Block Reward PoS : 
-	* Block Height == 2500 --> 12 = 30.000 SHIBA
-	* Block Height <= 5000 --> 8 = 40.000 SHIBA
-	* Block Height <= 10000 --> 4 = 40.000 SHIBA
-	* Block Height <= 200000 --> 2 = 400.000 SHIBA
-	* Block Height == 200001 --> 1.630.000 SHIBA
+	Block Reward PoS : 6.745.000 SHIBA 
+	* Block Height >= 2500 --> 2 = 2.500 x 2 = 5.000 SHIBA 
+	* Block Height >= 5000 --> 4 = 5.000 X 4 = 20.000 SHIBA
+	* Block Height >= 10000 --> 8 = 90.000 x 8 = 720.000 SHIBA
+	* Block Height >= 100000 --> 12 = 100.000 x 12 = 1.200.000 SHIBA
+	* Block Height >= 200000 --> 16 = 300.000 x 16 = 4.800.000 SHIBA
+	* Block Height == 500001 --> = 2.000.0000 SHIBA 
+	
 *  Min. stake age   12 hours
 *  Max. stake age   Unlimited
 * Target spacing    2 minutes
