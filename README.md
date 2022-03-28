@@ -56,7 +56,7 @@ Here are some ideas to get you started:
 	* Block Height >= 10000 --> 8 = 90.000 x 8 = 720.000 SHIBA
 	* Block Height >= 100000 --> 12 = 100.000 x 12 = 1.200.000 SHIBA
 	* Block Height >= 200000 --> 16 = 300.000 x 16 = 4.800.000 SHIBA
-	* Block Height == 500001 --> = 2.000.0000 SHIBA 
+	* Block Height == 500001 --> = 2.000.000 SHIBA 
 	
 *  Min. stake age   12 hours
 *  Max. stake age   Unlimited
