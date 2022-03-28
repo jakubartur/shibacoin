@@ -504,7 +504,7 @@ std::string LicenseInfo()
            "\n" +
            FormatParagraph(strprintf("Copyright (C) %i The MbroCoin Developers", 2022)) + "\n" +
            "\n" +
-           FormatParagraph(strprintf("Copyright (C) %i The ShibaCoin Project Developers", 2022)) + "\n" +
+           FormatParagraph(strprintf("Copyright (C) %i The ShibaCoin Developers", 2022)) + "\n" +
            "\n" +
         FormatParagraph(strprintf(_("Please contribute if you find Shibacoin useful. "
                        "Visit %s for further information about the software."),
