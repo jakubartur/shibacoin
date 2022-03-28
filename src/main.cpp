@@ -1782,30 +1782,34 @@ CAmount GetProofOfWorkSubsidy()
     int nBlockHeight = chainActive.Height() + 1;
 
     if (nBlockHeight == 1) {
-     return 10000 * COIN;
+     return 794445 * COIN;
     }
     if (nBlockHeight <= 100) {
-    return 5000 * COIN;
-    }
-    if (nBlockHeight <= 250) {
     return 1000 * COIN;
     }
-    if (nBlockHeight <= 500) {
+    if (nBlockHeight <= 250) {
     return 500 * COIN;
     }
+    if (nBlockHeight <= 500) {
+    return 30 * COIN;
+    }
     if (nBlockHeight <= 1000) {
-    return 250 * COIN;
+    return 25 * COIN;
     }
     if (nBlockHeight <= 5000) {
-    return 100 * COIN;
+    return 20 * COIN;
     }
     if (nBlockHeight <= 10000) {
+    return 15 * COIN;
+    }
+    if (nBlockHeight <= 250000) {
     return 10 * COIN;
     }
-    if (nBlockHeight <= 200000) {
+    if (nBlockHeight <= 500000) {
     return 5 * COIN;
     }
 }
+
 
 //------------- PoS Stake Reward ---------------- //
 
