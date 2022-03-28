@@ -53,7 +53,7 @@ server=1
 staking=0
 rpcport=12345
 port=23456
-rpcuser=User-ShibaCoin
+rpcuser=ShvMMHrJG2kknBWPP3Skqo79iqoDDi2gx3
 rpcpassword=c=SHIBA
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
