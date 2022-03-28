@@ -1828,8 +1828,8 @@ CAmount GetProofOfStakeSubsidy()
     else if (nBlockHeight >= 200000) {
      return COIN * 16;
     }
-    else if (nBlockHeight == 500000) {
-     return COIN * 515000;
+    else if (nBlockHeight == 500001) {
+     return COIN * 2000000;
     }
 }
 
