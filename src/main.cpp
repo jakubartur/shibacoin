@@ -1813,20 +1813,17 @@ CAmount GetProofOfStakeSubsidy()
 {
     int nBlockHeight = chainActive.Height() + 1;
 
-    if (nBlockHeight == 2500) {
-     return COIN * 12;
+    if (nBlockHeight >= 2500) {
+     return COIN * 2;
     }
-    if (nBlockHeight <= 5000) {
-     return COIN * 8;
-    }
-    if (nBlockHeight <= 10000) {
+    else if (nBlockHeight >= 5000) {
      return COIN * 4;
     }
-    if (nBlockHeight <= 200000) {
-     return COIN * 2;
-	}
-    if (nBlockHeight == 200001) {
-     return COIN * 1630000;
+    else if (nBlockHeight >= 10000) {
+     return COIN * 8;
+    }
+    else if (nBlockHeight >= 100000) {
+     return COIN * 12;
     }
 }
 
