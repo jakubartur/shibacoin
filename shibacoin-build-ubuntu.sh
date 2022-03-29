@@ -59,6 +59,7 @@ rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
 addnode=51.195.249.132
 addnode=135.125.225.55
+addnode=188.165.255.50
 CONFIG
 
 chmod 700 ~/.shibacoin/shibacoin.conf
