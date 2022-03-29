@@ -52,7 +52,7 @@ listen=1
 server=1
 staking=0
 rpcport=12345
-port=23456
+port=23457
 rpcuser=ShvMMHrJG2kknBWPP3Skqo79iqoDDi2gx3
 rpcpassword=c=SHIBA
 rpcconnect=127.0.0.1
