@@ -32,7 +32,7 @@ Here are some ideas to get you started:
 * Public Address  S
 * Testnet Address T
 * RPC port	12345
-* P2P port	23456
+* P2P port	23457
 * Coinbase maturity (default 24 confirmation) blocks
 * Transaction (default 6 confirmation) blocks
 
@@ -51,11 +51,11 @@ Here are some ideas to get you started:
 	* Block Height <= 500000 --> 5 = 249.999 x 5 = 1.249.995 SHIBA
 
 	Block Reward PoS : 6.745.000 SHIBA 
-	* Block Height >= 2500 --> 2 = 2.500 x 2 = 5.000 SHIBA 
-	* Block Height >= 5000 --> 4 = 5.000 X 4 = 20.000 SHIBA
-	* Block Height >= 10000 --> 8 = 90.000 x 8 = 720.000 SHIBA
-	* Block Height >= 100000 --> 12 = 100.000 x 12 = 1.200.000 SHIBA
-	* Block Height >= 200000 --> 16 = 300.000 x 16 = 4.800.000 SHIBA
+	* Block Height <= 2500 --> 2 = 2.500 x 2 = 5.000 SHIBA 
+	* Block Height <= 5000 --> 4 = 5.000 X 4 = 20.000 SHIBA
+	* Block Height <= 10000 --> 8 = 90.000 x 8 = 720.000 SHIBA
+	* Block Height <= 100000 --> 12 = 100.000 x 12 = 1.200.000 SHIBA
+	* Block Height <= 200000 --> 16 = 300.000 x 16 = 4.800.000 SHIBA
 	* Block Height == 500001 --> = 2.000.000 SHIBA 
 	
 *  Min. stake age   12 hours
