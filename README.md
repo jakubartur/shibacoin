@@ -1,7 +1,7 @@
 ### The MIT License (MIT)
 
 * Copyright (c) 2022 The ShibaCoin Project Developers
-* Copyright (c) 2022 The Shibacoin Developers
+* Copyright (c) 2022 The Mbrocoin Developers
 * Copyright (c) 2021-2022 The SafeMineCoin Developers
 * Copyright (c) 2018-2022 The Blackcoin More Developers
 * Copyright (c) 2014-2018 The BlackCoin Developers
