@@ -32,7 +32,7 @@ Here are some ideas to get you started:
 * Public Address  S
 * Testnet Address T
 * RPC port	12345
-* P2P port	23457
+* P2P port	22445
 * Coinbase maturity (default 24 confirmation) blocks
 * Transaction (default 6 confirmation) blocks
 
