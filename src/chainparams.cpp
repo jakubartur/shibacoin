@@ -105,8 +105,6 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
 
         // calculate main genesis block
-        // consensus.hashGenesisBlock = uint256S("0x00");
-
         if (true && (genesis.GetHash() != consensus.hashGenesisBlock)) {
 		std::cout << std::string("Calculating main genesis block...\n");
             arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
