@@ -63,6 +63,8 @@ Here are some ideas to get you started:
 * Target spacing    2 minutes
 * Target timespan   10 minutes
 
+#### [Block Explorer](https://explorer.coinshiba.xyz) 
+
 #### [Doc Build Instructions](https://github.com/shibacoinproject/shibacoin/tree/master/doc)
 #### [CLI Compile Linux Ubuntu](https://github.com/shibacoinproject/shibacoin/wiki/CLI-Compile-Linux-Ubuntu-18.04-or-20.04-LTS)
 
