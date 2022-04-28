@@ -52,14 +52,14 @@ listen=1
 server=1
 staking=0
 rpcport=12345
-port=23457
+port=22445
 rpcuser=ShvMMHrJG2kknBWPP3Skqo79iqoDDi2gx3
 rpcpassword=c=SHIBA
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
+addnode=51.77.48.45
 addnode=51.195.249.132
 addnode=135.125.225.55
-addnode=188.165.255.50
 CONFIG
 
 chmod 700 ~/.shibacoin/shibacoin.conf
