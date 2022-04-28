@@ -41,7 +41,7 @@ make install
 
 sudo ufw enable -y 
 sudo ufw allow 12345/tcp
-sudo ufw allow 23457/tcp
+sudo ufw allow 22445/tcp
 sudo ufw allow 22/tcp
 
 sudo mkdir ~/.shibacoin
