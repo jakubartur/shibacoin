@@ -1814,11 +1814,9 @@ CAmount GetProofOfStakeSubsidy()
     }
     if (nBlockHeight <= 10000) { return COIN * 8;
     }
-    if (nBlockHeight <= 100000) { return COIN * 12;
+    if (nBlockHeight <= 35000) { return COIN * 12;
     }
-    if (nBlockHeight <= 200000) { return COIN * 16;
-    }
-    if (nBlockHeight == 500001) { return COIN * 2000000;
+    if (nBlockHeight >= 35001) { return COIN * 2; // change to safe shibacoin
     }
 }
 
