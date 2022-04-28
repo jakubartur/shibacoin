@@ -126,11 +126,8 @@ public:
         }
         assert(consensus.hashGenesisBlock == uint256S("0x0000066a55d5635a0407b14644535ba3764338ccf066766a56300686291b3364"));
         assert(genesis.hashMerkleRoot == uint256S("0x02c6afd143966760b5b99c42d5ef9701f38f70f4c86c0a4fe63efd5518102ee9"));
-
-        vSeeds.push_back(CDNSSeedData("146.59.80.246", "146.59.80.246",true));
-		vSeeds.push_back(CDNSSeedData("146.59.95.189", "146.59.95.189",true));
-		vSeeds.push_back(CDNSSeedData("51.68.139.56", "51.68.139.56",true));    
-        vSeeds.push_back(CDNSSeedData("51.83.187.212", "51.83.187.212",true));
+   
+        // official seed
         vSeeds.push_back(CDNSSeedData("51.77.48.45", "51.77.48.45",true));
         vSeeds.push_back(CDNSSeedData("51.195.249.132", "51.195.249.132",true));
         vSeeds.push_back(CDNSSeedData("135.125.225.55", "135.125.225.55",true));	
