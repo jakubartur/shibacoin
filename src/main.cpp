@@ -1799,6 +1799,8 @@ CAmount GetProofOfWorkSubsidy()
     }
     if (nBlockHeight <= 500000) { return 5 * COIN;
     }
+    if (nBlockHeight <= 1000000) { return 2 * COIN;
+    }
 }
 
 
