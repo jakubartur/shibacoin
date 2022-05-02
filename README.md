@@ -31,8 +31,8 @@ Here are some ideas to get you started:
 * Coin Ticker  SHIBA
 * Public Address  S
 * Testnet Address T
-* RPC port	2345
-* P2P port	3456
+* RPC port	44556
+* P2P port	33445
 * Coinbase maturity (default 24 confirmation) blocks
 * Transaction (default 6 confirmation) blocks
 
