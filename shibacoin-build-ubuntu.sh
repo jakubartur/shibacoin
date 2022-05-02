@@ -40,8 +40,8 @@ make
 make install
 
 sudo ufw enable -y 
-sudo ufw allow 2345/tcp
-sudo ufw allow 3456/tcp
+sudo ufw allow 44556/tcp
+sudo ufw allow 33445/tcp
 sudo ufw allow 22/tcp
 
 sudo mkdir ~/.shibacoin
@@ -50,9 +50,8 @@ cat << "CONFIG" >> ~/.shibacoin/shibacoin.conf
 daemon=1
 listen=1
 server=1
-staking=0
-rpcport=2345
-port=3456
+rpcport=44556
+port=33445
 rpcuser=SWmtLhap34m213BDaVWghQcRuMBwP4pdPM
 rpcpassword=c=SHIBA
 rpcconnect=127.0.0.1
