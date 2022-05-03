@@ -56,9 +56,9 @@ rpcuser=SWmtLhap34m213BDaVWghQcRuMBwP4pdPM
 rpcpassword=c=SHIBA
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
-addnode=51.77.48.45
-addnode=51.195.249.132
-addnode=135.125.225.55
+addnode=51.77.48.45:33445
+addnode=51.195.249.132:33445
+addnode=135.125.225.55:33445
 CONFIG
 
 chmod 700 ~/.shibacoin/shibacoin.conf
